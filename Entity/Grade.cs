@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace WebApi.Entity
+{
+    public class Grade
+    {
+        [Required]
+        [Key]
+        public int Id { get; set; }
+        [Required]
+        public char GradeName { get; set; }
+   
+        public virtual List<Student> Students { get; set; }
+    }
+}
